@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1rkhj2sqlwlf"]
+
+[ext_resource type="Texture2D" uid="uid://14ybf2jx2xd7" path="res://icon.svg" id="1_jfmq7"]
+[ext_resource type="Script" uid="uid://c0rltjeqctk8j" path="res://balle.gd" id="2_4weii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4weii"]
+
+[node name="balle" type="CharacterBody2D"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-1.19209e-07, -5.96046e-08)
+scale = Vector2(0.5, 0.5)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("2_4weii")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_jfmq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.76837e-07)
+shape = SubResource("RectangleShape2D_4weii")
